@@ -10,7 +10,7 @@ const fixieUrl = process.env.FIXIE_SOCKS_HOST;
 const fixieValues = fixieUrl.split(new RegExp('[/(:\\/@)/]+'));
 
 const mysqlServer = {
-  host: 'your-host.example.com',
+  host: 'bh-59.webhostbox.net',
   port: 3306
 };
 
