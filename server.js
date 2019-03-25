@@ -21,50 +21,50 @@ if (cluster.isMaster) {
 }
 
 // Alex added FIXIE SOCKS
-'use strict';
+//'use strict';
 
-const SocksConnection = require('socksjs');
-const mysql = require('mysql2');
-const fixieUrl = process.env.FIXIE_SOCKS_HOST;
-const fixieValues = fixieUrl.split(new RegExp('[/(:\\/@)/]+'));
+//const SocksConnection = require('socksjs');
+//const mysql = require('mysql2');
+//const fixieUrl = process.env.FIXIE_SOCKS_HOST;
+//const fixieValues = fixieUrl.split(new RegExp('[/(:\\/@)/]+'));
 
-const mysqlServer = {
-  host: 'bh-59.webhostbox.net',
-  port: 3306
-};
+//const mysqlServer = {
+//  host: 'bh-59.webhostbox.net',
+//  port: 3306
+//};
 
-const dbUser = 'automk7b_asomba';
-const dbPassword = 'Uja97EbIQJsJn8s9gD';
-const db = 'automk7b_asomba';
+//const dbUser = 'automk7b_asomba';
+//const dbPassword = 'Uja97EbIQJsJn8s9gD';
+//const db = 'automk7b_asomba';
 
-const fixieConnection = new SocksConnection(mysqlServer, {
-  user: fixieValues[0],
-  pass: fixieValues[1],
-  host: fixieValues[2],
-  port: fixieValues[3],
-});
+//const fixieConnection = new SocksConnection(mysqlServer, {
+//  user: fixieValues[0],
+//  pass: fixieValues[1],
+//  host: fixieValues[2],
+//  port: fixieValues[3],
+//});
 
-const mysqlConnPool = mysql.createPool({
-  user: dbUser,
-  password: dbPassword,
-  database: db,
-  stream: fixieConnection
-});
+//const mysqlConnPool = mysql.createPool({
+//  user: dbUser,
+//  password: dbPassword,
+//  database: db,
+//  stream: fixieConnection
+//});
 
-mysqlConnPool.getConnection(function gotConnection(err, connection) {
+//mysqlConnPool.getConnection(function gotConnection(err, connection) {
 
-  if (err) throw err;
+//  if (err) throw err;
 
-  queryVersion(connection);
-});
+//  queryVersion(connection);
+//});
 
-function queryVersion(connection) {
-  connection.query('SELECT version();', function (err, rows, fields) {
+//function queryVersion(connection) {
+//  connection.query('SELECT version();', function (err, rows, fields) {
 
-      if (err) throw err;
+//      if (err) throw err;
 
-      console.log('MySQL/MariaDB version: ', rows);
-      connection.release();
-      process.exit();
-  });
-}
+//      console.log('MySQL/MariaDB version: ', rows);
+//      connection.release();
+//      process.exit();
+//  });
+//}
