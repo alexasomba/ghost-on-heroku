@@ -14,8 +14,9 @@
     "ghost": "^2.9.1",
     "ghost-storage-adapter-s3": "^2.7.0",
     "ghost-storage-cloudinary": "^1.1.2",
-    "mysql": "^2.16.0"
-    "mysql2": "^1.6.5"
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.5",
+    "socksjs": "^0.5.0"
   },
   "engines": {
     "node": "10.15.X"
